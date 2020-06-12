@@ -14,4 +14,6 @@ deploy:
   region: "eu-west-1"
   local_dir: build
 after_deploy:
+  - aws configure set aws_access_key_id $ACCESS_KEY
+  - aws configure set aws_secret_access_key $SECRET_KEY
   - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
