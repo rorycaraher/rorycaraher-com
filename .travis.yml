@@ -1,0 +1,9 @@
+language: generic
+deploy:
+  provider: s3
+  access_key_id: $ACCESS_KEY
+  secret_access_key: $SECRET_KEY
+  bucket: "rorycaraher-com"
+  skip_cleanup: true
+  region: "eu-west-1"
+  local_dir: build
