@@ -13,6 +13,8 @@ deploy:
   skip_cleanup: true
   region: "eu-west-1"
   local_dir: build
+  on:
+    branch: production
 after_deploy:
   - aws configure set aws_access_key_id $ACCESS_KEY
   - aws configure set aws_secret_access_key $SECRET_KEY
