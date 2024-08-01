@@ -1,0 +1,8 @@
+h1 {
+    color: var(--mg-color-primary);
+}
+
+li strong {
+    font-weight: normal;
+    color: var(--mg-color-primary);
+}

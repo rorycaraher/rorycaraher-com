@@ -6,7 +6,12 @@ draft = false
 
 Irish software engineer and musician, based in Berlin.
 
-- **March 2023 - Present** - Senior Site Reliability Engineer, Y42
-- **June 2020 - February 2023** - Senior Software Engineer, BrowserStack
-- **June 2016 - June 2020** - Backend Developer, Sysadmin, Together Digital
+## Work
+- March 2023 - Present - Senior Site Reliability Engineer, Y42
+- June 2020 - February 2023 - Senior Software Engineer, BrowserStack
+- June 2016 - June 2020 - Backend Developer, Sysadmin, Together Digital
+
+## Links
+- [github](https://github.com/rorycaraher/)
+- [soundcloud](https://soundcloud.com/corner_nltl/)
 
