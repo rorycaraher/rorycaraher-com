@@ -1,7 +1,7 @@
 :root {
     --mg-color-dark: #000;
     --mg-color-light: #fcfcfc;
-    --mg-color-primary: #475dca;
+    --mg-color-primary: #9b4dca;
     --mg-control-radius: .4rem;
     --mg-input-radius: .1rem;
     --mg-color-red: #dc3545;
@@ -28,6 +28,7 @@
   
   .mg-theme--light, :root[data-theme="light"] {
     --mg-color-initial: #fff;
+    --mg-color-secondary: #606c76;
     --mg-color-tertiary: #797979;
     --mg-color-quaternary: #a7a7a7;
     --mg-color-quinary: #dadada;
