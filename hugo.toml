@@ -1,0 +1,4 @@
+baseURL = 'https://www.rorycaraher.com/'
+languageCode = 'en-us'
+title = 'Rory Caraher'
+theme = 'rorycaraher'
