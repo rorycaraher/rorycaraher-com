@@ -8,7 +8,7 @@ Irish software engineer and musician, based in Berlin.
 
 ## Work
 - April 2025 - Present - Senior Platform Engineer, getolo
-- March 2023 - April 2025 - Senior Site Reliability Engineer, Y42
+- March 2023 - March 2025 - Senior Site Reliability Engineer, Y42
 - June 2020 - February 2023 - Senior Software Engineer, BrowserStack
 - June 2016 - June 2020 - Backend Developer, Sysadmin, Together Digital
 
