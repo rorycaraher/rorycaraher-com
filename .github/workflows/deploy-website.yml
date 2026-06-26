@@ -33,6 +33,12 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Fetch projects from GitHub
+        run: bash scripts/fetch-projects.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USER: rorycaraher
+
       - name: Build site
         run: hugo --source . --minify
 

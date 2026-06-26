@@ -10,11 +10,11 @@
   <section style="margin-top: 3.2rem;">
     <h2 style="margin-bottom: 1.6rem;">Projects</h2>
     <div class="mg-row" style="gap: 1.6rem 0;">
-      {{ range first 3 (where site.Data.projects "featured" true) }}
+      {{ range first 3 site.Data.projects }}
       <div class="mg-x12 mg-m4" style="padding: .8rem;">
         <div style="border: .1rem solid var(--mg-color-quinary); border-radius: var(--mg-control-radius); padding: 2rem 2.4rem; height: 100%;">
           <h3 style="margin-top: 0;">
-            <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .name }}</a>
+            <a href="{{ if .homepage }}{{ .homepage }}{{ else }}{{ .url }}{{ end }}" target="_blank" rel="noopener noreferrer">{{ .name }}</a>
           </h3>
           <p style="color: var(--mg-color-tertiary); margin-bottom: 1.2rem;">{{ .description }}</p>
           <div>
