@@ -18,7 +18,8 @@
   }
   
   .mg-theme--dark, :root[data-theme="dark"] {
-    --mg-color-initial: #302f2f;
+    --mg-color-initial: #18181b;
+    --mg-color-primary: #b175d6;
     --mg-color-secondary: #dadada;
     --mg-color-tertiary: #a7a7a7;
     --mg-color-quaternary: #817f7f;

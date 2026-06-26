@@ -1,0 +1,17 @@
+- name: rorycaraher-com
+  description: Personal website built with Hugo — dark theme, custom CSS framework.
+  url: https://github.com/rorycaraher/rorycaraher-com
+  tags: [hugo, web, css]
+  featured: true
+
+- name: getolo
+  description: Work at getolo — Senior Platform Engineer building infrastructure and developer tooling.
+  url: https://github.com/rorycaraher
+  tags: [platform, infrastructure, go]
+  featured: true
+
+- name: dotfiles
+  description: Personal dotfiles and shell configuration for a productive development environment.
+  url: https://github.com/rorycaraher/dotfiles
+  tags: [dotfiles, shell, tooling]
+  featured: true

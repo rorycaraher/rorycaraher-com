@@ -1,3 +1,66 @@
 {{ define "main" }}
-  {{ .Content }}
+  <section style="padding: 3.2rem 0 2.4rem;">
+    {{ with .Params.bio }}<p style="font-size: 2rem; line-height: 1.5; max-width: 64rem; margin: 0 0 1.6rem;">{{ . }}</p>{{ end }}
+    <div style="display: flex; gap: 1.6rem; flex-wrap: wrap;">
+      {{ with .Params.github }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">GitHub</a>{{ end }}
+      {{ with .Params.soundcloud }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">SoundCloud</a>{{ end }}
+    </div>
+  </section>
+
+  <section style="margin-top: 3.2rem;">
+    <h2 style="margin-bottom: 1.6rem;">Projects</h2>
+    <div class="mg-row" style="gap: 1.6rem 0;">
+      {{ range first 3 (where site.Data.projects "featured" true) }}
+      <div class="mg-x12 mg-m4" style="padding: .8rem;">
+        <div style="border: .1rem solid var(--mg-color-quinary); border-radius: var(--mg-control-radius); padding: 2rem 2.4rem; height: 100%;">
+          <h3 style="margin-top: 0;">
+            <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .name }}</a>
+          </h3>
+          <p style="color: var(--mg-color-tertiary); margin-bottom: 1.2rem;">{{ .description }}</p>
+          <div>
+            {{ range .tags }}
+            <span style="display: inline-block; font-size: 1.2rem; padding: .2rem .8rem; margin: .2rem .2rem 0 0; border-radius: var(--mg-control-radius); background: var(--mg-color-quinary); color: var(--mg-color-secondary);">{{ . }}</span>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    <p style="margin-top: 1.6rem;"><a href="/projects/">See all projects &rarr;</a></p>
+  </section>
+
+  <section style="margin-top: 3.2rem;">
+    <h2 style="margin-bottom: 1.6rem;">Music</h2>
+    <p style="color: var(--mg-color-tertiary); max-width: 64rem;">Electronic music made under the alias <strong>corner_nltl</strong> — textural, processed, somewhere between ambient and noise.</p>
+    <p style="margin-top: 1.2rem;"><a href="/music/">Listen &rarr;</a></p>
+  </section>
+
+  {{ $posts := where site.RegularPages "Section" "posts" }}
+  {{ if $posts }}
+  <section style="margin-top: 3.2rem;">
+    <h2 style="margin-bottom: 1.6rem;">Writing</h2>
+    <ul style="list-style: none; padding: 0; margin: 0;">
+      {{ range first 3 $posts }}
+      <li style="margin-bottom: 1.2rem;">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <span style="color: var(--mg-color-tertiary); font-size: 1.2rem; margin-left: .8rem;">{{ .Date.Format "Jan 2006" }}</span>
+      </li>
+      {{ end }}
+    </ul>
+    <p style="margin-top: 1.2rem;"><a href="/posts/">All posts &rarr;</a></p>
+  </section>
+  {{ end }}
+
+  {{ with .Content }}
+  <section style="margin-top: 3.2rem;">
+    <details>
+      <summary style="cursor: pointer; font-size: 1.6rem; font-weight: 600; color: var(--mg-color-secondary); list-style: none; display: flex; align-items: center; gap: .6rem;">
+        <span style="font-size: 1.2rem; color: var(--mg-color-tertiary);">&#9654;</span> Work history
+      </summary>
+      <div style="margin-top: 1.6rem;">
+        {{ . }}
+      </div>
+    </details>
+  </section>
+  {{ end }}
 {{ end }}
