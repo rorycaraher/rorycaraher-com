@@ -4,7 +4,7 @@ date = 2023-01-01T08:00:00-07:00
 draft = false
 bio = "Irish software engineer and musician, based in Berlin."
 github = "https://github.com/rorycaraher/"
-soundcloud = "https://soundcloud.com/corner_nltl/"
+soundcloud = "https://soundcloud.com/nothinglefttolearn/"
 +++
 
 ## Work

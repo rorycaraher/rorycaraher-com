@@ -1,7 +1,7 @@
-<div class="mg-container mg-row" style="margin-top: 6.4rem; padding: 3.2rem 0; border-top: .1rem solid var(--mg-color-quinary); color: var(--mg-color-tertiary); font-size: 1.4rem; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.2rem;">
+<div class="mg-container footer-inner">
   <span>{{ site.Copyright }}</span>
-  <div style="display: flex; gap: 1.6rem;">
-    {{ with site.Params.github }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer" style="color: var(--mg-color-tertiary);">GitHub</a>{{ end }}
-    {{ with site.Params.soundcloud }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer" style="color: var(--mg-color-tertiary);">SoundCloud</a>{{ end }}
+  <div class="footer-links">
+    {{ with site.Params.github }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">GitHub</a>{{ end }}
+    {{ with site.Params.soundcloud }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">SoundCloud</a>{{ end }}
   </div>
 </div>

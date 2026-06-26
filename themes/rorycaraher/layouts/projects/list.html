@@ -1,25 +1,22 @@
 {{ define "main" }}
 <h1>{{ .Title }}</h1>
-<div class="mg-row" style="gap: 1.6rem 0;">
-  {{ range site.Data.projects }}
-  <div class="mg-x12 mg-m4" style="padding: .8rem;">
-    <div style="border: .1rem solid var(--mg-color-quinary); border-radius: var(--mg-control-radius); padding: 2rem 2.4rem; height: 100%;">
-      <h3 style="margin-top: 0;">
-        <a href="{{ if .homepage }}{{ .homepage }}{{ else }}{{ .url }}{{ end }}" target="_blank" rel="noopener noreferrer">{{ .name }}</a>
-      </h3>
-      <p style="color: var(--mg-color-tertiary); margin-bottom: 1.2rem;">{{ .description }}</p>
-      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
-        <div>
-          {{ range .tags }}
-          <span style="display: inline-block; font-size: 1.2rem; padding: .2rem .8rem; margin: .2rem .2rem 0 0; border-radius: var(--mg-control-radius); background: var(--mg-color-quinary); color: var(--mg-color-secondary);">{{ . }}</span>
-          {{ end }}
+<div class="mg-row card-grid">
+    {{ range where site.Data.projects "featured" true }}
+    <div class="mg-x12 mg-m4 card-col">
+        <div class="card">
+            <h3>
+                <a href="{{ .url }}" target="_blank" rel="noopener noreferrer"
+                    >{{ .name }}</a
+                >
+            </h3>
+            <p class="card-desc">{{ .description }}</p>
+            <div>
+                {{ range .tags }}
+                <span class="tag">{{ . }}</span>
+                {{ end }}
+            </div>
         </div>
-        {{ if .homepage }}
-        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" style="font-size: 1.2rem; white-space: nowrap;">GitHub &rarr;</a>
-        {{ end }}
-      </div>
     </div>
-  </div>
-  {{ end }}
+    {{ end }}
 </div>
 {{ end }}
