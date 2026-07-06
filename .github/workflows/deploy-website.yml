@@ -15,7 +15,15 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  deploy-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: rorycaraher/no-deploy-fridays@v4bc02e56befcbcc81d56460a97604bf708cd23a0
+        with:
+          timezone: "Germany/Berlin"
+          work-days: "tue,wed,thu,fri"
   build:
+    needs: deploy-gate
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -42,7 +50,7 @@ jobs:
           path: ./public
 
   deploy:
-    needs: build
+    needs: [deploy-gate, build]
     runs-on: ubuntu-latest
     environment:
       name: github-pages
