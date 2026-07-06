@@ -165,10 +165,6 @@ a:hover, a:focus {
   color: var(--color-text);
 }
 
-.see-all {
-  margin-top: 1.6rem;
-}
-
 .text-muted {
   color: var(--color-text-muted);
   max-width: 64rem;
@@ -176,22 +172,6 @@ a:hover, a:focus {
 
 .link-group {
   margin-top: 1.2rem;
-}
-
-.post-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.post-list li {
-  margin-bottom: 1.2rem;
-}
-
-.post-date {
-  color: var(--color-text-muted);
-  font-size: 1.2rem;
-  margin-left: 0.8rem;
 }
 
 footer {
@@ -222,37 +202,4 @@ footer {
 
 .footer-links a:hover {
   color: var(--color-text);
-}
-
-.work-summary {
-  cursor: pointer;
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: var(--color-text);
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-
-.work-summary::-webkit-details-marker {
-  display: none;
-}
-
-.work-summary::marker {
-  display: none;
-  content: '';
-}
-
-.work-arrow {
-  font-size: 1.2rem;
-  color: var(--color-text-muted);
-  transition: transform 0.2s;
-}
-
-details[open] .work-arrow {
-  transform: rotate(90deg);
-}
-
-.work-content {
-  margin-top: 1.6rem;
 }

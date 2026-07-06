@@ -1,7 +1,11 @@
 {{ define "main" }}
 <h1>{{ .Title }}</h1>
+{{ .Content }}
+
+{{ with site.Data.projects }}
+<h2 class="section-title">Projects</h2>
 <div class="mg-row card-grid">
-    {{ range where site.Data.projects "featured" true }}
+    {{ range . }}
     <div class="mg-x12 mg-m4 card-col">
         <div class="card">
             <h3>
@@ -10,13 +14,16 @@
                 >
             </h3>
             <p class="card-desc">{{ .description }}</p>
+            {{ with .tags }}
             <div>
-                {{ range .tags }}
+                {{ range . }}
                 <span class="tag">{{ . }}</span>
                 {{ end }}
             </div>
+            {{ end }}
         </div>
     </div>
     {{ end }}
 </div>
+{{ end }}
 {{ end }}

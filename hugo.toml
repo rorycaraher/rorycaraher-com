@@ -3,6 +3,7 @@ languageCode = 'en-us'
 title = 'Rory Caraher'
 theme = 'rorycaraher'
 copyright = '© 2026 Rory Caraher'
+disableKinds = ['taxonomy', 'term']
 
 [params]
   github = "https://github.com/rorycaraher/"
@@ -14,17 +15,11 @@ url = '/'
 weight = 1
 
 [[menus.main]]
-name = 'Projects'
-url = '/projects/'
+name = 'Work'
+url = '/work/'
 weight = 2
 
 [[menus.main]]
-name = 'Music'
-url = '/music/'
+name = 'Extras'
+url = '/extras/'
 weight = 3
-
-[[menus.main]]
-name = 'Blog'
-url = '/posts/'
-identifier = 'blog'
-weight = 4
